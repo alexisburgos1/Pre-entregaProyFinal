@@ -3,7 +3,7 @@
 
 
 
-function cargarBase(){
+function addProduct(){
 
     function Product(title,description,price){
         this.title = title;
