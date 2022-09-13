@@ -26,7 +26,7 @@ var dataBase = [];
 function add(){
     dataBase.push(newProduct);
     console.log(dataBase);
-    document.getElementById("tabla").innerHTML += '<tbody><td>'+nuevoProducto.title+'</td><td>'+nuevoProducto.description+'</td><td>'+nuevoProducto.price+'</td></tbody>'
+    document.getElementById("tabla").innerHTML += '<tbody><td>'+newProduct.title+'</td><td>'+newProduct.description+'</td><td>'+newProduct.price+'</td></tbody>'
 
 };
 function Export() {
