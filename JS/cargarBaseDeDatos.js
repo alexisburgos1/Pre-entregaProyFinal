@@ -3,7 +3,7 @@
 
 
 
-function addProduct(){
+function newProduct(){
 
     function Product(title,description,price){
         this.title = title;
