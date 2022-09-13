@@ -1,9 +1,4 @@
-
-
-
-
-
-function newProduct(){
+function fillBase(){
 
     function Product(title,description,price){
         this.title = title;
@@ -13,24 +8,24 @@ function newProduct(){
 
     var titleCapture = document.getElementById('productTitle').value;
     var descriptionCapture = document.getElementById('productDescription').value;
-    var priceCapture = document.getElementById('price').value;
+    var pricesCapture = document.getElementById('price').value;
 
-    newProduct = new Product(titleCapture,descriptionCapture,priceCapture);
+    newProduct = new Product(titleCapture,descriptionCapture,pricesCapture);
     console.log(newProduct);
-    add();
+    addNewProduct();
 
 }
 
 var dataBase = [];
 
-function add(){
+function addNewProduct(){
     dataBase.push(newProduct);
     console.log(dataBase);
-    document.getElementById("tabla").innerHTML += '<tbody><td>'+newProduct.title+'</td><td>'+newProduct.description+'</td><td>'+newProduct.price+'</td></tbody>'
+    document.getElementById("table").innerHTML += '<tbody><td>'+newProduct.title+'</td><td>'+newProduct.description+'</td><td>'+newProduct.price+'</td></tbody>'
 
 };
 function Export() {
-    html2canvas(document.getElementById('tabla'), {
+    html2canvas(document.getElementById('table'), {
         onrendered: function (canvas) {
             var data = canvas.toDataURL();
             var docDefinition = {
@@ -43,6 +38,3 @@ function Export() {
         }
     });
 }
-    
-     
-
