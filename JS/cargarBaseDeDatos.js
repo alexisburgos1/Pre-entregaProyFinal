@@ -5,28 +5,28 @@
 
 function cargarBase(){
 
-    function Product(title,descr,precio){
+    function Product(title,description,price){
         this.title = title;
-        this.descr = descr;
-        this.precio = precio;
+        this.description = description;
+        this.price = price;
     }
 
-    var titleCapturar = document.getElementById('productTitle').value;
-    var descriptionCapturar = document.getElementById('productDescription').value;
-    var urlCapturar = document.getElementById('price').value;
+    var titleCapture = document.getElementById('productTitle').value;
+    var descriptionCapture = document.getElementById('productDescription').value;
+    var priceCapture = document.getElementById('price').value;
 
-    nuevoProducto = new Product(titleCapturar,descriptionCapturar,urlCapturar);
-    console.log(nuevoProducto);
-    agregar();
+    newProduct = new Product(titleCapture,descriptionCapture,priceCapture);
+    console.log(newProduct);
+    add();
 
 }
 
-var baseDatos = [];
+var dataBase = [];
 
-function agregar(){
-    baseDatos.push(nuevoProducto);
-    console.log(baseDatos);
-    document.getElementById("tabla").innerHTML += '<tbody><td>'+nuevoProducto.title+'</td><td>'+nuevoProducto.descr+'</td><td>'+nuevoProducto.precio+'</td></tbody>'
+function add(){
+    dataBase.push(newProduct);
+    console.log(dataBase);
+    document.getElementById("tabla").innerHTML += '<tbody><td>'+nuevoProducto.title+'</td><td>'+nuevoProducto.description+'</td><td>'+nuevoProducto.price+'</td></tbody>'
 
 };
 function Export() {
