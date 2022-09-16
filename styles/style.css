@@ -1,0 +1,884 @@
+@media screen and (min-width: 780px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  a:link, a:visited, a:active {
+    text-decoration: none;
+  }
+  body {
+    background-image: url("./../Multimedia/img0.png");
+    display: grid;
+    grid-template-areas: "header" "Carrousel" "footer";
+    grid-gap: 3rem;
+    color: white !important;
+    font-family: "Audiowide", sans-serif !important;
+  }
+  body header .navbar-brand {
+    color: #FF4A21 !important;
+    font-size: 40px !important;
+  }
+  body header .nav-item {
+    margin-left: 40px;
+    font-size: 20px;
+  }
+  body header .nav-link.active {
+    color: #FF4A21 !important;
+  }
+  body header .nav-link:hover {
+    color: #FF4A21 !important;
+  }
+  body header .nav-pills {
+    padding-top: 15px;
+    grid-area: header;
+    display: flex;
+    justify-content: left;
+    font-family: "Audiowide", sans-serif;
+    --bs-nav-pills-link-active-bg: map-get($colores, Naranja);
+    --bs-nav-link-color: #fff;
+    --bs-nav-link-hover-color: map-get($colores, Naranja);
+    height: 70px;
+  }
+  body header h3 {
+    font-family: "Audiowide", sans-serif;
+    margin-left: 50px;
+    margin-right: 25px;
+    padding-bottom: 30px;
+    color: #FFffff;
+  }
+  body header h3:hover {
+    color: #FF4A21;
+  }
+  body header #boton-carrito{
+    transform: scale(1.55);
+    background-color: #00003A;
+    color: #FF4A21!important;
+    margin-right: 50px;
+    border-color: white;
+  }
+  
+  body .Carrousel {
+    grid-area: Carrousel;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+  body .Carrousel .indexDiv {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "h1 h1" "imagenUno imagenDos";
+    grid-gap: 6rem;
+    height: 700px;
+  }
+  body .Carrousel .indexDiv h1 {
+    grid-area: h1;
+    color: #FFffff;
+    font-size: 80px;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+  }
+  body .Carrousel .indexDiv h1:hover {
+    color: #FF4A21;
+  }
+  body .Carrousel .indexDiv .imagenUno {
+    grid-area: imagenUno;
+    position: relative;
+    transition-delay: 2s;
+    height: 407px;
+    width: 700px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .indexDiv .img-Uno {
+    display: block;
+    width: 100%;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Audiowide", sans-serif;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.25s;
+    height: 400px;
+    width: 694px;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay > * {
+    transform: translateY(30px);
+    transition: transform 0.25s;
+  }
+  body .Carrousel .indexDiv .imagenUno__title {
+    font-size: 50px;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay:hover {
+    opacity: 1;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay:hover > * {
+    transform: translateY(0);
+  }
+  body .Carrousel .indexDiv .imagenDos {
+    grid-area: imagenDos;
+    position: relative;
+    transition-delay: 2s;
+    height: 407px;
+    width: 700px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .indexDiv .img-Dos {
+    display: block;
+    width: 100%;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Audiowide", sans-serif;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.25s;
+    height: 400px;
+    width: 694px;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay > * {
+    transform: translateY(30px);
+    transition: transform 0.25s;
+  }
+  body .Carrousel .indexDiv .imagenDos__title {
+    font-size: 50px;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay:hover {
+    opacity: 1;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay:hover > * {
+    transform: translateY(0);
+  }
+  body .Carrousel h1 {
+    grid-area: h1;
+    color: #FFffff;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+  }
+  body .Carrousel h1:hover {
+    color: #FF4A21;
+  }
+  body .Carrousel .articleHeadset {
+    grid-area: articleOne;
+    width: 100%;
+    text-align: left;
+    height: 700px;
+    padding-left: 200px;
+    background-image: url(./../Multimedia/hyprheadst.png);
+  }
+  body .Carrousel .articleHeadset h5 {
+    color: #FFffff;
+    font-family: "Audiowide", sans-serif;
+    -webkit-text-stroke: 0.5px black;
+    font-weight: 200;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    height: 100px;
+    width: 400px;
+  }
+  body .Carrousel .articleHeadset input[type=LearnMore] {
+    background-color: #aa0444;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+  }
+  body .Carrousel .carouselDiv {
+    grid-template-rows: 0fr 5fr;
+    grid-template-areas: "carouselCards" "carouselPage";
+    grid-gap: 2rem;
+  }
+  
+
+  
+img {
+  max-width: 100%;
+  margin-bottom: 100px;
+}
+#boton-carrito {
+  border: none;
+  
+  
+  background-color: white;
+  
+  padding: 10px 20px;
+  transition: all .3s;
+}
+#boton-carrito:hover {
+  cursor: pointer;
+  color: white;
+  
+}
+#boton-carrito:focus {
+  outline: none;
+}
+
+#contenedor-productos {
+  max-width: 1800px;
+  margin: 5px auto;
+  display: flex;
+  
+  flex-wrap: wrap;
+}
+
+p {
+  line-height: 1.8;
+}
+.producto {
+  max-width: 350px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 20px;
+  background-color: black;
+}
+.producto:hover {
+  background-color: rgb(43, 41, 41) !important;
+  color: white !important;
+  transform: scale(1.05);
+}
+.precioProducto {
+  font-weight: 700;
+  margin-left: 10px;
+}
+.producto .boton-agregar {
+  background-color: #FF4A21!important;
+  color: white;
+  font-size: 16px;
+  font-weight: 70;
+  padding: 5px;
+  border: #000000;
+  width: 172px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#vaciar-carrito{
+  background-color: #FF4A21!important;
+  color: white;
+  font-size: 16px;
+  font-weight: 70;
+  padding: 5px;
+  border: #000000;
+  width: 172px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#vaciar-carrito:hover{
+  cursor: pointer;
+}
+.producto .fa-shopping-cart{
+  color: black;
+}
+.producto .boton-agregar:hover {
+  cursor: pointer;
+}
+.producto .boton-agregar:focus {
+  outline: none;
+}
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  min-width: 900px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.modal-carrito h3 {
+  color:#FF4A21;
+  padding-bottom: 5px;
+}
+.modal-carrito p{
+  color: black;
+}
+.modal-carrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: royalblue;
+  border: none;
+  background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+  outline: none;
+}
+.modal-carrito .precioProducto {
+  padding-top: 10px;
+  
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.productoEnCarrito:hover {
+  border-left: 5px solid royalblue;
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 20px;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+}
+.boton-eliminar:focus {
+  outline: none;
+}
+
+  body .Carrousel .carouselDiv .carouselPage {
+    grid-area: carouselPage;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: "h1" "carouselPics";
+  }
+  body .Carrousel .carouselDiv .carouselPage #carouselExampleFade {
+    grid-area: carouselPics;
+    position: relative !important;
+    margin: auto;
+  }
+  body .Carrousel .carouselDiv .carouselPage .carouselPictures .img4G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img3G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img2G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img1G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img5G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img6G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img7G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img8G {
+    height: 600px;
+    width: 1200px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-next, body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-prev {
+    opacity: 0.3 !important;
+    width: 10% !important;
+  }
+  body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-next:hover, body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-prev:hover {
+    opacity: 0.5 !important;
+  }
+  body .Carrousel .divFind {
+    display: grid;
+    height: 700px;
+    --bs-body-font-size: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr;
+    grid-template-areas: "divAFind" "mapaborder";
+    grid-gap: 2rem;
+    width: 100%;
+  }
+  body .Carrousel .divFind .divAFind {
+    grid-area: divAFind;
+    height: 50px;
+  }
+  body .Carrousel .divFind .mapaborder {
+    grid-area: mapaborder;
+    margin-top: 40px;
+    justify-self: center;
+    height: 607px;
+    width: 1207px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .divFind .mapa {
+    display: flex;
+    justify-content: center;
+    filter: grayscale(50%) invert(95%) contrast(100%);
+    height: 600px;
+    width: 1200px;
+  }
+  body .Carrousel .CarrouselGrid {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 2fr;
+    grid-template-rows: 0.3fr 5fr;
+    grid-template-areas: "h1 h1 h1" "video empty formulario";
+    justify-items: center;
+    grid-gap: 4rem;
+    height: 700px;
+  }
+  body .Carrousel .CarrouselGrid .videoGal1 {
+    grid-area: video;
+  }
+  body .Carrousel .CarrouselGrid video {
+    grid-area: video;
+    height: 395px;
+    width: 700px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .CarrouselGrid .empty {
+    grid-area: empty;
+    width: 10px;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 {
+    grid-area: formulario;
+    height: 440px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 65px;
+    display: table-cell;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 .formulario {
+    text-align: center;
+    color: #ffffff;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 .formulario .input-style-3 {
+    padding: 5px 0;
+    font-size: 16px;
+    color: #ccc;
+    background: transparent;
+    font-family: "Audiowide", sans-serif;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 .formulario input[type=button] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+  }
+  body footer {
+    grid-area: footer;
+    height: 10px;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    align-items: flex-end;
+    color: #FF4A21;
+  }
+  body footer span {
+    color: #FF4A21;
+  }
+  .whatsapp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 90px;
+    right: 40px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+  }
+  .wp_logo {
+    margin-top: 13px;
+  }
+}
+@media screen and (max-width: 780px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  a:link, a:visited, a:active {
+    text-decoration: none;
+  }
+  body {
+    background-image: url("./../Multimedia/img0.png");
+    display: grid;
+    --bs-body-color: #fff;
+    color: white !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    width: 100%;
+    height: 100hv;
+    grid-template-areas: "nav" "Carrousel" "footer";
+    grid-gap: 2rem;
+    -webkit-text-stroke: 0.5px black;
+    font-family: "Audiowide", sans-serif !important;
+  }
+  body header .nav-pills {
+    grid-area: nav;
+    padding-top: 10px;
+    grid-area: header;
+    display: flex;
+    justify-content: left;
+    font-family: "Audiowide", sans-serif;
+    --bs-nav-pills-link-active-bg: map-get($colores, Naranja);
+    --bs-nav-link-color: #fff;
+    --bs-nav-link-hover-color: map-get($colores, Naranja);
+  }
+  body header .navbar-brand {
+    color: #FF4A21 !important;
+    font-size: 40px !important;
+  }
+  body header .nav-item {
+    margin-left: 40px;
+    font-size: 20px;
+  }
+  body header .nav-link.active {
+    color: #FF4A21 !important;
+  }
+  body header .nav-link:hover {
+    color: #FF4A21 !important;
+  }
+  body header h3 {
+    font-family: "Audiowide", sans-serif;
+    margin-left: 50px;
+    margin-right: 25px;
+    padding-bottom: 30px;
+    font-size: small;
+    color: #FFffff;
+  }
+  body .Carrousel {
+    grid-area: Carrousel;
+    justify-content: center;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  body .Carrousel .indexDiv {
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas: "h1" "imagenUno" "imagenDos";
+    grid-gap: 2rem;
+  }
+  body .Carrousel .indexDiv h1 {
+    grid-area: h1;
+    color: #FFffff;
+    font-size: 40px;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+  }
+  body .Carrousel .indexDiv h1:hover {
+    color: #FF4A21;
+  }
+  body .Carrousel .indexDiv .imagenUno {
+    grid-area: imagenUno;
+    position: relative;
+    justify-self: center;
+    transition-delay: 2s;
+    height: 217px;
+    width: 387px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .indexDiv .img-Uno {
+    display: block;
+    width: 100%;
+    height: 210px;
+    width: 380px;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Audiowide", sans-serif;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.25s;
+    height: 210px;
+    width: 380px;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay > * {
+    transform: translateY(30px);
+    transition: transform 0.25s;
+  }
+  body .Carrousel .indexDiv .imagenUno__title {
+    font-size: 50px;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay:hover {
+    opacity: 1;
+  }
+  body .Carrousel .indexDiv .imagenUno__overlay:hover > * {
+    transform: translateY(0);
+  }
+  body .Carrousel .indexDiv .imagenDos {
+    grid-area: imagenDos;
+    position: relative;
+    transition-delay: 2s;
+    justify-self: center;
+    height: 217px;
+    width: 387px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .indexDiv .img-Dos {
+    display: block;
+    width: 100%;
+    height: 210px;
+    width: 380px;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Audiowide", sans-serif;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.25s;
+    height: 210px;
+    width: 380px;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay > * {
+    transform: translateY(30px);
+    transition: transform 0.25s;
+  }
+  body .Carrousel .indexDiv .imagenDos__title {
+    font-size: 50px;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay:hover {
+    opacity: 1;
+  }
+  body .Carrousel .indexDiv .imagenDos__overlay:hover > * {
+    transform: translateY(0);
+  }
+  body .Carrousel h1 {
+    grid-area: h1;
+    color: #FFffff;
+    font-size: 40px;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+  }
+  body .Carrousel h1:hover {
+    color: #FF4A21;
+  }
+  body .Carrousel .articleHeadset {
+    width: 100%;
+    height: 700px;
+    text-align: left;
+    background-image: url("./../Multimedia/hyprxheadset.png");
+  }
+  body .Carrousel .articleHeadset h5 {
+    color: #FFffff;
+    font-family: "Audiowide", sans-serif;
+    -webkit-text-stroke: 1px black;
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: left;
+    width: 250px;
+    padding-left: 39px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  body .Carrousel .articleHeadset input[type=LearnMore] {
+    background-color: #aa0444;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 16px 32px;
+    text-decoration: none;
+    position: fixed;
+    margin-top: 200px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+    width: 260px;
+  }
+  body .Carrousel .carouselDiv {
+    display: grid;
+    grid-template-areas: "carouselCards" "carouselPage";
+    grid-gap: 2rem;
+  }
+  
+  body .Carrousel .carouselDiv .carouselPage {
+    grid-area: carouselPage;
+    display: grid;
+    grid-gap: 0rem;
+    grid-template-areas: "h1" "carouselPics";
+  }
+  body .Carrousel .carouselDiv .carouselPage #carouselExampleFade {
+    grid-area: carouselPics;
+    position: relative !important;
+    margin: auto;
+  }
+  body .Carrousel .carouselDiv .carouselPage .carousel-inner, body .Carrousel .carouselDiv .carouselPage .carousel, body .Carrousel .carouselDiv .carouselPage .carousel-fade, body .Carrousel .carouselDiv .carouselPage .slide, body .Carrousel .carouselDiv .carouselPage .pointer-event {
+    margin-top: 10px !important;
+    height: 210px;
+    width: 374px;
+    position: relative !important;
+    justify-self: center !important;
+    margin: auto;
+  }
+  body .Carrousel .carouselDiv .carouselPage .carouselPictures .img4G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img3G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img2G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img1G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img5G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img6G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img7G, body .Carrousel .carouselDiv .carouselPage .carouselPictures .img8G {
+    height: 210px;
+    width: 374px;
+    position: relative;
+    justify-self: center;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-prev:hover, body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-next:hover {
+    opacity: 0.5 !important;
+  }
+  body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-next, body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-prev {
+    opacity: 0.3 !important;
+    width: 10% !important;
+  }
+  body .Carrousel .divFind {
+    display: grid;
+    height: 585px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 5fr;
+    grid-template-areas: "divAFind" "mapaborder";
+    grid-gap: 2rem;
+  }
+  body .Carrousel .divFind .divAFind {
+    grid-area: divAFind;
+  }
+  body .Carrousel .divFind .mapaborder {
+    grid-area: mapaborder;
+    margin-top: 40px;
+    justify-self: center;
+    width: auto;
+    height: 407px;
+    border-bottom: 3px solid #FF4A21;
+    border-right: 3px solid #FF4A21;
+    border-left: 3px solid #FF4A21;
+    border-top: 3px solid #FF4A21;
+  }
+  body .Carrousel .divFind .mapa {
+    display: flex;
+    justify-content: center;
+    filter: grayscale(50%) invert(95%) contrast(100%);
+    width: auto;
+    height: 400px;
+    border-bottom: 6px solid #FF4A21;
+    border-right: 6px solid #FF4A21;
+  }
+  body .Carrousel .CarrouselGrid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0fr 0.3fr 1fr;
+    grid-template-areas: "h1 h1" "video video" "formulario formulario";
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+  body .Carrousel .CarrouselGrid .videoGal1 {
+    grid-area: video;
+  }
+  body .Carrousel .CarrouselGrid video {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 400px;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 {
+    grid-area: formulario;
+    height: 467px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 65px;
+    display: table-cell;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 .formulario {
+    text-align: center;
+    color: #ffffff;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 .formulario .input-style-3 {
+    padding: 5px 0;
+    font-size: 16px;
+    color: #ccc;
+    background: transparent;
+    font-family: "Audiowide", sans-serif;
+  }
+  body .Carrousel .CarrouselGrid .formDiv1 .formulario input[type=button] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+  }
+  body footer {
+    grid-area: footer;
+    height: 20px;
+    font-family: "Audiowide", sans-serif;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    color: #FF4A21;
+  }
+  body footer span {
+    color: #FF4A21;
+  }
+  .whatsapp {
+    position: fixed;
+    max-width: 20px;
+    max-height: 20px;
+    bottom: 90px;
+    right: 40px;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+  }
+  .wp_logo {
+    margin-top: 13px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
