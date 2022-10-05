@@ -16,27 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
-    actualizarCarrito()
-})
 
+fetch("./../js/datastock.json")
+.then(response => response.json())
+.then(data => {
+    data.forEach(producto => {
+        let div = document.createElement("div");
+        div.classList.add('producto')
+        div.innerHTML = `
+        <style= width= 22rem >
+        <img src=${producto.img} alt= "" height= 300px width= 348px >
+        <h3>${producto.nombre}</h3>
+        <p>${producto.desc}</p>
+        <p class="precioProducto">Price: ARS $ ${producto.precio}</p>
+        <button id="agregar${producto.id}" class="boton-agregar">Add to Cart <i class="fas fa-shopping-cart"></i></button>
 
-stockProductos.forEach((producto) => {
-    const div = document.createElement('div')
-    div.classList.add('producto')
-    div.innerHTML = `
-    <style= width= 22rem >
-    <img src=${producto.img} alt= "" height= 300px width= 348px >
-    <h3>${producto.nombre}</h3>
-    <p>${producto.desc}</p>
-    <p class="precioProducto">Price: ARS $ ${producto.precio}</p>
-    <button id="agregar${producto.id}" class="boton-agregar">Add to Cart <i class="fas fa-shopping-cart"></i></button>
-
-    `
-    contenedorProductos.appendChild(div)
-
-    const boton = document.getElementById(`agregar${producto.id}`)
+        `;
+        contenedorProductos.append(div);
+        const boton = document.getElementById(`agregar${producto.id}`)
 
     boton.addEventListener('click', () => {
         //esta funcion ejecuta el agregar el carrito con la id del producto
@@ -52,9 +49,8 @@ stockProductos.forEach((producto) => {
             }
           }).showToast();
     })
+        });
 })
-
-
 
 //Agregar al carrito
 const agregarAlCarrito = (prodId) => {
@@ -71,6 +67,7 @@ const agregarAlCarrito = (prodId) => {
     } else { 
         const item = stockProductos.find((prod) => prod.id === prodId)//Trabajamos con las ID
         //Una vez obtenida la ID, lo que haremos es hacerle un push para agregarlo al carrito
+        
         carrito.push(item)
     }
 
@@ -96,14 +93,19 @@ const eliminarDelCarrito = (prodId) => {
     }
     else{carrito.splice(indice, 1) //Le pasamos el indice de mi elemento ITEM y borramos un elemento 
     }
-        
-    
-    
-    
-    
     actualizarCarrito() 
     console.log(carrito)
 }
+
+botonVaciar.addEventListener('click', () => {
+    carrito.forEach(producto => {
+        producto.cantidad = 1
+        
+        producto.length = 0
+    })
+        carrito.length = 0
+        actualizarCarrito()
+})
 
 const actualizarCarrito = () => {
    
