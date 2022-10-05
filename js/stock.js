@@ -1,0 +1,12 @@
+let stockProductos = [
+    {id: 1, nombre: "X-box 360 Joystick", tipo: "Joystick", cantidad: 1, desc: "Microsoft Joystick and best seller in the market.", precio: 11200, img: 'https://m.media-amazon.com/images/I/61JFYuA8nLL._AC_SY450_.jpg'},
+    {id: 2, nombre: "Pulsefire Core", tipo: "Mouse", cantidad: 1, desc: "This is an excellent ultra-light gaming mouse created by Hyperx", precio: 11100, img: 'http://d2r9epyceweg5n.cloudfront.net/stores/001/343/167/products/mouse-hyperx-pulsefire-core-rgb-21-9522e49bcf872afa4c16207822129293-640-0.jpg'},
+    {id: 3, nombre: "Hyperx Cloud Flight", tipo: "headset", cantidad: 1, desc: "The best Wireless headset in the market", precio: 1200, img: './../Multimedia/hyprxheadset.png'},
+    {id: 4, nombre: "Razer Gigantus V2", tipo: "mousepad", cantidad: 1, desc: "Mousepad with 4 different sizes to satisfy your needs", precio: 4000,  img: 'https://assets3.razerzone.com/sIMGVvDQ5k7PRi-kAUyF1WtBbc0=/1500x1000/https%3A%2F%2Fhybrismediaprod.blob.core.windows.net%2Fsys-master-phoenix-images-container%2Fh13%2Fh5d%2F9081442959390%2FgigantusV2-prodpg-gallery-1500x1000-hero.jpg'},
+    {id: 5, nombre: "Logitech-G502", tipo: "mouse", cantidad: 1, desc: "The weight-distribution of the mouse can be changed to any preference.", precio: 12200,  img: 'https://blog.lxgindia.com/wp-content/uploads/2016/04/Logitech-G502.jpg'},
+    {id: 6, nombre: "Impact 908", tipo: "Mouse", cantidad: 1, desc: "Mouse Gamer Redragon optimized for MOBA and MMORPG", precio: 3500,  img: 'https://m.media-amazon.com/images/S/aplus-media/sc/2209ce93-812f-4030-8481-929d0bef420f.__CR102,41,900,900_PT0_SX300_V1___.jpg'},
+    {id: 7, nombre: "PS4 Wheel", tipo: "wheel", cantidad: 1, desc: "PS4 racing wheels with an excellent feedback experience", precio: 5000, img: 'https://m.media-amazon.com/images/I/61bEgMwc0RL._AC_SL1318_.jpg'},
+    {id: 8, nombre: "Bungee V3 CHROMA Razer", tipo: "mouse Bungee", cantidad: 1, desc: "Mouse Bungee V3 CHROMA Razer", precio: 5800, img: 'https://oplaygaming.com/wp-content/uploads/2021/02/razer-mouse-bungee-v3-chroma-gallery-3-1.jpg'},
+    {id: 9, nombre: "Astro A50", tipo: "headset", cantidad: 1, desc: "The Best sound and confort is garanteed by Astro", precio: 7900, img: 'https://pbs.twimg.com/media/EWP0M9EXkAEXVsq.jpg'},
+    {id: 10, nombre: "LG UltraGear25GN800", tipo: "Display-screen", cantidad: 1,desc: "Ultra-width display and 144hz", precio: 70000, img: 'https://www.muycomputer.com/wp-content/uploads/2020/11/LG-UltraGear-27GN800-e1604484455987.jpg'},
+]
