@@ -41,7 +41,7 @@ fetch("./../js/datastock.json")
         Toastify({
             text: `${producto.nombre} was added to Cart`,
             className: "info",
-            duration: "3000",
+            duration: "2000",
             style: {
               background: "linear-gradient(to right, #00003A, #00003A, #00003A,#FF4A21, #FF4A21 )",
               margin: "70px",
