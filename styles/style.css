@@ -407,6 +407,7 @@ p {
   body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-next, body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-prev {
     opacity: 0.3 !important;
     width: 10% !important;
+    height: 86% !important;
   }
   body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-next:hover, body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-prev:hover {
     opacity: 0.5 !important;
@@ -776,7 +777,7 @@ p {
   body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-next, body .Carrousel .carouselDiv .carouselPage .carouselPictures .carousel-control-prev {
     opacity: 0.3 !important;
     width: 10% !important;
-    height: 86% !important;
+    
   }
   body .Carrousel .divFind {
     display: grid;
