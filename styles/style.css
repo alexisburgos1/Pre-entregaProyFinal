@@ -56,6 +56,22 @@
     margin-right: 50px;
     border-color: white;
   }
+  .buttonStyle{
+    background-color: #FF4A21;
+    color: white;
+    width: 241px;
+    height: 38px;
+    
+  }
+  .buttonStyle:hover{
+    transform: scale(1.1);
+  }
+  .buttonStyle:active{
+    color: #FF4A21;
+  }
+  .buttonStyle:target{
+    color: #FF4A21;
+  }
   
   body .Carrousel {
     grid-area: Carrousel;
@@ -855,6 +871,22 @@ p {
     margin: 4px 2px;
     cursor: pointer;
     font-family: "Audiowide", sans-serif;
+  }
+  .buttonStyle{
+    background-color: #FF4A21;
+    color: white;
+    width: 241px;
+    height: 38px;
+    
+  }
+  .buttonStyle:hover{
+    transform: scale(1.1);
+  }
+  .buttonStyle:active{
+    color: #FF4A21;
+  }
+  .buttonStyle:target{
+    color: #FF4A21;
   }
   body footer {
     grid-area: footer;
