@@ -97,14 +97,19 @@ const eliminarDelCarrito = (prodId) => {
     console.log(carrito)
 }
 
+
+
 botonVaciar.addEventListener('click', () => {
     carrito.forEach(producto => {
         producto.cantidad = 1
-        
+        carrito.splice(0,undefined)
+        carrito.length  = 0
         producto.length = 0
-    })
-        carrito.length = 0
-        actualizarCarrito()
+        
+        console.log(carrito)
+    })    
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    actualizarCarrito();
 })
 
 const actualizarCarrito = () => {
@@ -123,6 +128,7 @@ const actualizarCarrito = () => {
         `
 
         contenedorCarrito.appendChild(div)
+        
         
         localStorage.setItem('carrito', JSON.stringify(carrito))
 
