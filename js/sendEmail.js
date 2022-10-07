@@ -15,7 +15,7 @@ function sendEmail(){
         emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
             btn.value = 'Send Email';
-            alert('Thanks for your message!');
+            alert('Thanks for your message, an auto-repy email was sent to your inbox');
         }, (err) => {
             btn.value = 'Send Email';
             alert(JSON.stringify(err));
