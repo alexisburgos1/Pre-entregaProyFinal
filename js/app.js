@@ -6,7 +6,7 @@ const contadorCarrito = document.getElementById('contadorCarrito')
 const cantidad = document.getElementById('cantidad')
 const precioTotal = document.getElementById('precioTotal')
 const cantidadTotal = document.getElementById('cantidadTotal')
-
+const purchaseCarrito = document.getElementById('purchase')
 let carrito = []
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -97,19 +97,17 @@ const eliminarDelCarrito = (prodId) => {
     console.log(carrito)
 }
 
-
-
 botonVaciar.addEventListener('click', () => {
     carrito.forEach(producto => {
         producto.cantidad = 1
-        carrito.splice(0,undefined)
-        carrito.length  = 0
-        producto.length = 0
         
-        console.log(carrito)
-    })    
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-    actualizarCarrito();
+        producto.length = 0
+        carrito.splice(0 , carrito.length)
+        actualizarCarrito()
+    })
+        carrito.length = 0
+        
+        actualizarCarrito()
 })
 
 const actualizarCarrito = () => {
@@ -125,11 +123,9 @@ const actualizarCarrito = () => {
         <p>Price:$${prod.precio}</p>
         <p>items: <span id="cantidad">${prod.cantidad}</span></p>
         <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-        
         `
 
         contenedorCarrito.appendChild(div)
-        
         
         localStorage.setItem('carrito', JSON.stringify(carrito))
 
@@ -143,3 +139,19 @@ const actualizarCarrito = () => {
     //empezando en 0.
 
 }
+
+
+purchaseCarrito.addEventListener('click', () => {
+
+    Toastify({
+        text: `Thanks so much for your order! I hope you enjoy your new purchase!`,
+        position: 'center',
+        gravity: "bottom",
+        duration: "3000",
+        style: {
+          background: "linear-gradient(to right, #00003A, #00003A, #00003A,#FF4A21, #FF4A21 )",
+          margin: "0px",
+          
+        }
+      }).showToast();
+})
